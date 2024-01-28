@@ -1,0 +1,37 @@
+jwt:
+  secret-key: Z29nby10bS1zZXJ2ZXItZGxyamVvYW9yb3JodG9kZ290c3Atam9vbmdhbmduaW0teWVvbHNpbWhpaGFsZ2VveW8K
+
+oauth:
+  kakao:
+    client-id: 218218ad0178d4a0b76a55ffeb155957
+    url:
+      auth: https://kauth.kakao.com
+      api: https://kapi.kakao.com
+      redirect: http://localhost:8080/users/logout/kakao
+      logout: https://kapi.kakao.com/v1/user/logout
+  naver:
+    secret: RktX7yIc6P
+    client-id: Sz6qeDvQKMAa96LN6ESa
+    url:
+      auth: https://nid.naver.com
+      api: https://openapi.naver.com
+
+spring:
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/testdb
+    username: sa
+    password: 1
+    driver-class-name: org.h2.Driver
+
+  h2:
+    console:
+      path: /h2console
+      enabled: true
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true

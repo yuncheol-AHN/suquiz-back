@@ -1,5 +1,7 @@
 package com.example.entity.domain;
 
+import com.example.entity.domain.bookmark.ecntity.Bookmark;
+import com.example.entity.domain.singlehistory.entity.SingleHistory;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -36,7 +38,7 @@ public class User {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "quizroom_id")
     private Quizroom quizroom;
-
+    //
     private String nickname;
     private int level;
     private int exp;

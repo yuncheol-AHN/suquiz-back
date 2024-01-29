@@ -1,4 +1,4 @@
-package com.example.entity.dto.word;
+package com.example.entity.domain.dto.word;
 
 import com.example.entity.domain.Category;
 import com.example.entity.domain.Subject;

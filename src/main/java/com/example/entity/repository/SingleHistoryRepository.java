@@ -1,6 +1,6 @@
 package com.example.entity.repository;
 
-import com.example.entity.domain.SingleHistory;
+import com.example.entity.domain.singlehistory.entity.SingleHistory;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

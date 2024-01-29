@@ -1,10 +1,9 @@
 package com.example.entity.repository;
 
-import com.example.entity.domain.SingleHistory;
+import com.example.entity.domain.singlehistory.entity.SingleHistory;
 import com.example.entity.domain.User;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
-import jakarta.transaction.Transaction;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

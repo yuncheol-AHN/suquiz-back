@@ -1,8 +1,8 @@
-package com.example.entity.education.serviceImpl;
+package com.example.entity.repository.education.serviceImpl;
 
 import com.example.entity.domain.Category;
 import com.example.entity.domain.Word;
-import com.example.entity.education.service.WordService;
+import com.example.entity.repository.education.service.WordService;
 import com.example.entity.repository.WordRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

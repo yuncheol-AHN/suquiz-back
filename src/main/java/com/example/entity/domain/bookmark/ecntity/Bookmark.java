@@ -1,5 +1,7 @@
-package com.example.entity.domain;
+package com.example.entity.domain.bookmark.ecntity;
 
+import com.example.entity.domain.User;
+import com.example.entity.domain.Word;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

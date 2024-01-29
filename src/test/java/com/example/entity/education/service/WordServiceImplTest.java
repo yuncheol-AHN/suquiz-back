@@ -5,18 +5,16 @@ import com.example.entity.domain.Subject;
 import com.example.entity.domain.Word;
 import com.example.entity.repository.SubjectRepository;
 import com.example.entity.repository.WordRepository;
+import com.example.entity.repository.education.service.WordService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
-
 @SpringBootTest
 class WordServiceImplTest {
 
-    @Autowired WordService wordService;
+    @Autowired
+    WordService wordService;
     @Autowired
     SubjectRepository subjectRepository;
     @Autowired

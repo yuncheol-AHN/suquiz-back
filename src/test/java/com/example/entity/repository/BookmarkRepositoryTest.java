@@ -1,6 +1,7 @@
 package com.example.entity.repository;
 
 import com.example.entity.domain.*;
+import com.example.entity.domain.bookmark.ecntity.Bookmark;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

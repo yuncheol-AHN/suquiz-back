@@ -1,8 +1,8 @@
-package com.example.entity.education.controller;
+package com.example.entity.repository.education.controller;
 
 import com.example.entity.domain.Category;
 import com.example.entity.domain.Word;
-import com.example.entity.education.service.WordService;
+import com.example.entity.repository.education.service.WordService;
 import com.example.entity.global.dto.CommonResponse;
 import com.example.entity.repository.WordRepository;
 import lombok.RequiredArgsConstructor;
@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping("/word")

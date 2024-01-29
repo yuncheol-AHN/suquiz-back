@@ -1,4 +1,4 @@
-package com.example.entity.education.service;
+package com.example.entity.repository.education.service;
 
 import com.example.entity.domain.Subject;
 

@@ -3,7 +3,6 @@ package com.example.entity.repository;
 import com.example.entity.domain.Category;
 import com.example.entity.domain.Subject;
 import com.example.entity.domain.Word;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -13,7 +12,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.ArrayList;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 @Transactional
@@ -21,7 +19,8 @@ import static org.junit.jupiter.api.Assertions.*;
 class SubjectRepositoryTest {
 
     @Autowired SubjectRepository subjectRepository;
-    @Autowired WordRepoitory wordRepoitory;
+    @Autowired
+    WordRepository wordRepository;
 
     @Test
     public void saveTest() throws Exception {

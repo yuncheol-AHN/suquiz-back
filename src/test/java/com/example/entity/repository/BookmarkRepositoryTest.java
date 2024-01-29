@@ -1,19 +1,13 @@
 package com.example.entity.repository;
 
 import com.example.entity.domain.*;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import static org.apache.coyote.http11.Constants.a;
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 @Transactional
@@ -22,7 +16,8 @@ class BookmarkRepositoryTest {
 
     @Autowired UserRepository userRepository;
     @Autowired SubjectRepository subjectRepository;
-    @Autowired WordRepoitory wordRepoitory;
+    @Autowired
+    WordRepository wordRepository;
     @Autowired BookmarkRepository bookmarkRepository;
 
     /**
@@ -78,8 +73,8 @@ class BookmarkRepositoryTest {
                 .build();
 
         subjectRepository.save(fruit);
-        wordRepoitory.save(apple);
-        wordRepoitory.save(banana);
+        wordRepository.save(apple);
+        wordRepository.save(banana);
 
         Bookmark bookmark_apple = Bookmark.builder()
                 .user(chulsu)

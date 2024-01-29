@@ -26,10 +26,11 @@ public class Subject {
 
     private String subjectName;
 
-    @Builder
-    public Subject(String subjectName) {
+//    @Builder
+//    public Subject(String subjectName) {
+//        this.subjectName = subjectName;
+//    }
 
-        this.subjectName = subjectName;
-    }
+
 
 }

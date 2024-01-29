@@ -3,6 +3,8 @@ package com.example.entity.domain;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.ArrayList;
+
 
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
@@ -18,8 +20,6 @@ public class Word {
     /**
      * 유저 북마크, 퀴즈룸 질문리스트
      **/
-//    @OneToMany(mappedBy = "word")
-//    private List<Bookmark> bookmarkList = new ArrayList<>();
 
 //    @OneToMany(mappedBy = "word")
 //    @Builder.Default

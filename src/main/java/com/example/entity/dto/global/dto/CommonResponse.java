@@ -1,10 +1,11 @@
-package com.example.entity.global.dto;
+package com.example.entity.dto.global.dto;
 
 
 import lombok.Builder;
 import lombok.Getter;
 
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 @Getter

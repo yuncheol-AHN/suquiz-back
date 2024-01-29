@@ -55,7 +55,6 @@ class SubjectRepositoryTest {
         // given
         Subject nameA = Subject.builder()
                 .subjectName("달력")
-                .wordList(new ArrayList<>())
                 .build();
 
         Word word = Word.builder()

@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 import java.util.ArrayList;
 import java.util.List;
 
-@Builder(toBuilder = true) // 수정을 하고 싶을 때 toBuilder
+//@Builder(toBuilder = true) // 수정을 하고 싶을 때 toBuilder
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
@@ -21,16 +21,23 @@ public class Subject {
     private Long id;
 
     @OneToMany(mappedBy = "subject")
-    @Builder.Default
+//    @Builder.Default
     private List<Word> wordList = new ArrayList<>();
 
     private String subjectName;
 
-//    @Builder
-//    public Subject(String subjectName) {
-//        this.subjectName = subjectName;
-//    }
+    @Builder
+    public Subject(String subjectName) {
+        this.subjectName = subjectName;
+    }
 
-
+    // wordList에 대한 생성 메서드
+    public List<String> getWordListNames() {
+        List<String> wordListNames = new ArrayList<>();
+        for (Word word : wordList) {
+            wordListNames.add(word.getWordName());
+        }
+        return wordListNames;
+    }
 
 }

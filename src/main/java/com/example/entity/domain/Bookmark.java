@@ -26,4 +26,5 @@ public class Bookmark { // user - word
     @ManyToOne(fetch = FetchType.LAZY)
 //    @JoinColumn(name = "word_id")
     private Word word;
+
 }

@@ -11,17 +11,28 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 @SpringBootTest
 class WordServiceImplTest {
 
+    @Autowired SubjectService subjectService;
     @Autowired WordService wordService;
     @Autowired
     SubjectRepository subjectRepository;
     @Autowired
     WordRepository wordRepository;
-    
+
+
+    @Test
+    public void 테스트2() throws Exception {
+        // given
+        List<Word> list = wordRepository.findAll();
+        // when
+        for (Word word : list) {
+            System.out.println("word.getWordName() = " + word.getWordName());
+        }
+        // then
+        
+    }
     @Test
     public void 테스트() throws Exception {
         // given

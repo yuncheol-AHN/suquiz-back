@@ -57,4 +57,13 @@ public class User {
         this.oAuthProvider = oAuthProvider;
     }
 
+    public void addBookmark(Word word) {
+        Bookmark bookmark = Bookmark.builder().user(this).word(word).build();
+        this.bookmarkList.add(bookmark);
+    }
+
+    public void removeBookmark(Word word) {
+        this.bookmarkList.removeIf(bookmark -> bookmark.getWord().equals(word));
+    }
+
 }

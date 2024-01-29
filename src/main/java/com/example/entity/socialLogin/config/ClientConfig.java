@@ -1,4 +1,4 @@
-package com.example.entity.config;
+package com.example.entity.socialLogin.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

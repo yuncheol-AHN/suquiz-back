@@ -1,7 +1,7 @@
 package com.example.entity.domain;
 
 import com.example.entity.domain.bookmark.ecntity.Bookmark;
-import com.example.entity.domain.singlehistory.entity.SingleHistory;
+import com.example.entity.domain.singleplay.entity.SingleHistory;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

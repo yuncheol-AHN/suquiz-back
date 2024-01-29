@@ -1,8 +1,8 @@
 package com.example.entity.service;
 
 import com.example.entity.domain.User;
-import com.example.entity.domain.singlehistory.dto.SingleHistoryDto;
-import com.example.entity.domain.singlehistory.entity.SingleHistory;
+import com.example.entity.domain.singleplay.dto.SingleHistoryDto;
+import com.example.entity.domain.singleplay.entity.SingleHistory;
 import com.example.entity.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -38,7 +38,7 @@ public class EntityAndDtoConversionService {
         return SingleHistoryDto.SaveResponse.builder()
                 .email(singleHistory.getUser().getEmail())
                 .trialCount(singleHistory.getTrialCount())
-                .isCorrect(singleHistory.isCorrect())
+                .correct(singleHistory.isCorrect())
                 .resultText(singleHistory.getResultText())
                 .build();
     }

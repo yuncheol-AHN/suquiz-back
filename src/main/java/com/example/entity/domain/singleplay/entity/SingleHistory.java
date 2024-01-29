@@ -1,4 +1,4 @@
-package com.example.entity.domain.singlehistory.entity;
+package com.example.entity.domain.singleplay.entity;
 
 
 import com.example.entity.domain.User;

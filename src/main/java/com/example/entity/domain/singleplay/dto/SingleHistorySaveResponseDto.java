@@ -1,4 +1,4 @@
-package com.example.entity.domain.singlehistory.dto;
+package com.example.entity.domain.singleplay.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class SingleHistorySaveRequestDto {
+public class SingleHistorySaveResponseDto {
     protected String email;
     protected int trialCount;
     protected boolean isCorrect;

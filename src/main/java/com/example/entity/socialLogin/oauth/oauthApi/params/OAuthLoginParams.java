@@ -1,6 +1,6 @@
 package com.example.entity.socialLogin.oauth.oauthApi.params;
 
-import com.example.entity.domain.OAuthProvider;
+import com.example.entity.user.OAuthProvider;
 import org.springframework.util.MultiValueMap;
 
 

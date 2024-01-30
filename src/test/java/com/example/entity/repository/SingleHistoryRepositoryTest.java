@@ -1,10 +1,10 @@
 package com.example.entity.repository;
 
-import com.example.entity.domain.SingleHistory;
-import com.example.entity.domain.User;
+import com.example.entity.singleplay.domain.SingleHistory;
+import com.example.entity.user.User;
+import com.example.entity.singleplay.repository.SingleHistoryRepository;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
-import jakarta.transaction.Transaction;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -25,7 +25,8 @@ public class SingleHistoryRepositoryTest {
     @PersistenceContext
     EntityManager em;
     @Autowired UserRepository userRepository;
-    @Autowired SingleHistoryRepository singleHistoryRepository;
+    @Autowired
+    SingleHistoryRepository singleHistoryRepository;
 
     @Test
     public void test() throws Exception {

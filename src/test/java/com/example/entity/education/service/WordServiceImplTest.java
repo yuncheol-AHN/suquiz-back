@@ -1,10 +1,10 @@
 package com.example.entity.education.service;
 
-import com.example.entity.domain.Category;
-import com.example.entity.domain.Subject;
-import com.example.entity.domain.Word;
-import com.example.entity.repository.SubjectRepository;
-import com.example.entity.repository.WordRepository;
+import com.example.entity.word.Category;
+import com.example.entity.word.Subject;
+import com.example.entity.word.Word;
+import com.example.entity.education.repository.SubjectRepository;
+import com.example.entity.education.repository.WordRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

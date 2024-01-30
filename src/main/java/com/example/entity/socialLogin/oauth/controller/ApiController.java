@@ -1,6 +1,6 @@
 package com.example.entity.socialLogin.oauth.controller;
 
-import com.example.entity.domain.User;
+import com.example.entity.user.User;
 import com.example.entity.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

@@ -1,9 +1,9 @@
 package com.example.entity.education.controller;
 
-import com.example.entity.domain.Category;
-import com.example.entity.dto.word.WordDTO;
+import com.example.entity.word.Category;
+import com.example.entity.education.dto.WordDTO;
 import com.example.entity.education.service.WordService;
-import com.example.entity.dto.global.dto.CommonResponse;
+import com.example.entity.global.dto.CommonResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

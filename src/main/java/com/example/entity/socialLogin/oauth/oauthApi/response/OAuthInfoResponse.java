@@ -1,7 +1,7 @@
 package com.example.entity.socialLogin.oauth.oauthApi.response;
 
 
-import com.example.entity.domain.OAuthProvider;
+import com.example.entity.user.OAuthProvider;
 
 public interface OAuthInfoResponse {
     String getEmail();

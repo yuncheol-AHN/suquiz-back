@@ -1,7 +1,7 @@
 package com.example.entity.education.service;
 
-import com.example.entity.domain.Category;
-import com.example.entity.dto.word.WordDTO;
+import com.example.entity.word.Category;
+import com.example.entity.education.dto.WordDTO;
 
 import java.util.List;
 

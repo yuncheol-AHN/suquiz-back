@@ -1,10 +1,10 @@
 package com.example.entity.education.serviceImpl;
 
-import com.example.entity.domain.Subject;
-import com.example.entity.dto.subject.SubjectDTO;
-import com.example.entity.education.service.EntityAndDtoConversionService;
+import com.example.entity.word.Subject;
+import com.example.entity.education.dto.SubjectDTO;
+import com.example.entity.global.service.EntityAndDtoConversionService;
 import com.example.entity.education.service.SubjectService;
-import com.example.entity.repository.SubjectRepository;
+import com.example.entity.education.repository.SubjectRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

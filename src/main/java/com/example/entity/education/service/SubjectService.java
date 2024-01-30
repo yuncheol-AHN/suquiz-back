@@ -1,8 +1,6 @@
 package com.example.entity.education.service;
 
-import com.example.entity.domain.Subject;
-import com.example.entity.dto.subject.SubjectDTO;
-import org.springframework.data.jpa.repository.Query;
+import com.example.entity.education.dto.SubjectDTO;
 
 import java.util.List;
 

@@ -1,8 +1,10 @@
 package com.example.entity.repository;
 
-import com.example.entity.domain.Category;
-import com.example.entity.domain.Subject;
-import com.example.entity.domain.Word;
+import com.example.entity.education.repository.SubjectRepository;
+import com.example.entity.education.repository.WordRepository;
+import com.example.entity.word.Category;
+import com.example.entity.word.Subject;
+import com.example.entity.word.Word;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +23,8 @@ class WordRepoitoryTest {
 
     @Autowired
     WordRepository wordRepository;
-    @Autowired SubjectRepository subjectRepository;
+    @Autowired
+    SubjectRepository subjectRepository;
 
     @Test
     public void createWord() throws Exception {

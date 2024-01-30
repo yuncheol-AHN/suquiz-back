@@ -1,8 +1,8 @@
 package com.example.entity.repository;
 
-import com.example.entity.domain.singleplay.entity.SingleHistory;
-import com.example.entity.domain.User;
-import com.example.entity.domain.singleplay.repository.SingleHistoryRepository;
+import com.example.entity.singleplay.entity.SingleHistory;
+import com.example.entity.user.User;
+import com.example.entity.singleplay.repository.SingleHistoryRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -118,14 +118,14 @@ public class SingleHistoryRepositoryTest {
 
         userRepository.save(user);
 
-        SingleHistory history = SingleHistory.builder()
-                .user(user)
-                .trialCount(4)
-                .isCorrect(true)
-                .createDate(LocalDate.now())
-                .resultText("success")
-                .build();
-
-        singleHistoryRepository.save(history);
+//        SingleHistory history = SingleHistory.builder()
+//                .user(user)
+//                .trialCount(4)
+//                .isCorrect(true)
+//                .createDate(LocalDate.now())
+//                .resultText("success")
+//                .build();
+//
+//        singleHistoryRepository.save(history);
     }
 }

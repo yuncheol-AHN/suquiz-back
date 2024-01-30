@@ -25,9 +25,9 @@ public class User {
     // unique key
     private String email;
 
-    @OneToMany(mappedBy = "user")
-    @Builder.Default
-    private List<Bookmark> bookmarkList = new ArrayList<>();
+//    @OneToMany(mappedBy = "user")
+//    @Builder.Default
+//    private List<Bookmark> bookmarkList = new ArrayList<>();
 
     @OneToMany(mappedBy = "user")
     @Builder.Default
@@ -55,15 +55,6 @@ public class User {
         this.email = email;
         this.nickname = nickname;
         this.oAuthProvider = oAuthProvider;
-    }
-
-    public void addBookmark(Word word) {
-        Bookmark bookmark = Bookmark.builder().user(this).word(word).build();
-        this.bookmarkList.add(bookmark);
-    }
-
-    public void removeBookmark(Word word) {
-        this.bookmarkList.removeIf(bookmark -> bookmark.getWord().equals(word));
     }
 
 }

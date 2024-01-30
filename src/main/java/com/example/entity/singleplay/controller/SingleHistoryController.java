@@ -38,7 +38,17 @@ public class SingleHistoryController {
         return new ResponseEntity<>(CommonResponse.builder()
                 .status(HttpStatus.OK.value())
                 .message("daily wordle")
-//                .list(singleHistoryService.dailyQuest())
+//                .data(singleHistoryService.dailyQuest())
+                .build(), HttpStatus.OK);
+    }
+
+    @GetMapping("/additional")
+    public ResponseEntity<CommonResponse> additionalQuest() {
+
+        return new ResponseEntity<>(CommonResponse.builder()
+                .status(HttpStatus.OK.value())
+                .message("share daily single history")
+                .data(singleHistoryService.additionalQuest())
                 .build(), HttpStatus.OK);
     }
 
@@ -77,7 +87,9 @@ public class SingleHistoryController {
          */
 
         return new ResponseEntity<>(CommonResponse.builder()
-
+                .status(HttpStatus.OK.value())
+                .message("share daily single history")
+                .data(singleHistoryService.singlePlayAllResult(email))
                 .build(), HttpStatus.OK);
     }
 }

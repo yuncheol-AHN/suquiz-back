@@ -1,6 +1,7 @@
 package com.example.entity.repository;
 
 import com.example.entity.bookmark.domain.Bookmark;
+import com.example.entity.bookmark.repository.BookmarkRepository;
 import com.example.entity.word.Category;
 import com.example.entity.word.Subject;
 import com.example.entity.word.Word;
@@ -25,7 +26,8 @@ class BookmarkRepositoryTest {
     SubjectRepository subjectRepository;
     @Autowired
     WordRepository wordRepository;
-    @Autowired BookmarkRepository bookmarkRepository;
+    @Autowired
+    BookmarkRepository bookmarkRepository;
 
     /**
      * required : create, find ...

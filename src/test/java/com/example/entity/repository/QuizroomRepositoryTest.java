@@ -9,7 +9,8 @@ import com.example.entity.word.domain.Category;
 import com.example.entity.word.domain.Subject;
 import com.example.entity.word.domain.Word;
 import com.example.entity.word.repository.SubjectRepository;
-import com.example.entity.word.repository.WordRepoitory;
+import com.example.entity.word.repository.WordRepository;
+import com.example.entity.word.repository.WordRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -29,7 +30,7 @@ class QuizroomRepositoryTest {
     @Autowired
     QuizroomRepository quizroomRepository;
     @Autowired
-    WordRepoitory wordRepoitory;
+    WordRepository wordRepository;
     @Autowired
     SubjectRepository subjectRepository;
 
@@ -74,8 +75,8 @@ class QuizroomRepositoryTest {
         // when
         subjectRepository.save(fruit);
         quizroomRepository.save(quizRoom);
-        wordRepoitory.save(wordA);
-        wordRepoitory.save(wordB);
+        wordRepository.save(wordA);
+        wordRepository.save(wordB);
         QuizroomWord saveQuizroom = quizroomWordRepository.save(quizroomWord);
         List<QuizroomWord> quizroomWordList = saveQuizroom.getQuizroom().getQuizroomWordList();
         System.out.println("quizroomWordList = " + quizroomWordList);

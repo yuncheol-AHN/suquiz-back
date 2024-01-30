@@ -5,7 +5,7 @@ import com.example.entity.word.domain.Category;
 import com.example.entity.word.domain.Subject;
 import com.example.entity.word.domain.Word;
 import com.example.entity.word.repository.SubjectRepository;
-import com.example.entity.word.repository.WordRepoitory;
+import com.example.entity.word.repository.WordRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -49,7 +49,7 @@ public class SingleHistoryController {
         return new ResponseEntity<>(CommonResponse.builder()
                 .status(HttpStatus.OK.value())
                 .message("save daily single history")
-                .list(save)
+                .data(save)
                 .build(), HttpStatus.OK);
     }
 
@@ -60,7 +60,7 @@ public class SingleHistoryController {
         return new ResponseEntity<>(CommonResponse.builder()
                 .status(HttpStatus.OK.value())
                 .message("share daily single history")
-                .list(singleHistoryService.dailyShare(email))
+                .data(singleHistoryService.dailyShare(email))
                 .build(), HttpStatus.OK);
     }
 

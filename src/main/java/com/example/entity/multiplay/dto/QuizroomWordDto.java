@@ -1,7 +1,6 @@
 package com.example.entity.multiplay.dto;
 
 import com.example.entity.multiplay.domain.Quizroom;
-import com.example.entity.domain.dto.word.WordDto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -23,6 +22,6 @@ public class QuizroomWordDto {
     @AllArgsConstructor
     static class response {
         QuizroomDto quizroom;
-        WordDto word;
+
     }
 }

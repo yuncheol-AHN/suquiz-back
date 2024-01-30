@@ -1,6 +1,12 @@
 package com.example.entity.repository;
 
-import com.example.entity.domain.*;
+import com.example.entity.bookmark.domain.Bookmark;
+import com.example.entity.word.Category;
+import com.example.entity.word.Subject;
+import com.example.entity.word.Word;
+import com.example.entity.education.repository.SubjectRepository;
+import com.example.entity.education.repository.WordRepository;
+import com.example.entity.user.User;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -15,7 +21,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 class BookmarkRepositoryTest {
 
     @Autowired UserRepository userRepository;
-    @Autowired SubjectRepository subjectRepository;
+    @Autowired
+    SubjectRepository subjectRepository;
     @Autowired
     WordRepository wordRepository;
     @Autowired BookmarkRepository bookmarkRepository;

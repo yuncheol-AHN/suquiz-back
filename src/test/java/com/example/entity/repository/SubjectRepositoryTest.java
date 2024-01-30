@@ -1,15 +1,15 @@
 package com.example.entity.repository;
 
-import com.example.entity.domain.Category;
-import com.example.entity.domain.Subject;
-import com.example.entity.domain.Word;
+import com.example.entity.word.Category;
+import com.example.entity.word.Subject;
+import com.example.entity.word.Word;
+import com.example.entity.education.repository.SubjectRepository;
+import com.example.entity.education.repository.WordRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.util.ArrayList;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -18,7 +18,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Rollback(value = false)
 class SubjectRepositoryTest {
 
-    @Autowired SubjectRepository subjectRepository;
+    @Autowired
+    SubjectRepository subjectRepository;
     @Autowired
     WordRepository wordRepository;
 
@@ -55,7 +56,6 @@ class SubjectRepositoryTest {
         // given
         Subject nameA = Subject.builder()
                 .subjectName("달력")
-                .wordList(new ArrayList<>())
                 .build();
 
         Word word = Word.builder()

@@ -1,4 +1,4 @@
-package com.example.entity.domain;
+package com.example.entity.word;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -18,8 +18,6 @@ public class Word {
     /**
      * 유저 북마크, 퀴즈룸 질문리스트
      **/
-//    @OneToMany(mappedBy = "word")
-//    private List<Bookmark> bookmarkList = new ArrayList<>();
 
 //    @OneToMany(mappedBy = "word")
 //    @Builder.Default

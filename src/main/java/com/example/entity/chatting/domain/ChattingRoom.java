@@ -1,6 +1,5 @@
-package com.example.entity.domain;
+package com.example.entity.chatting.domain;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -14,12 +13,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 @Getter
-public class Level {
+public class ChattingRoom {
 
     @Id @GeneratedValue
-    @Column(name = "level_id")
     private Long id;
 
-    private int level;
-    private int exp;
 }

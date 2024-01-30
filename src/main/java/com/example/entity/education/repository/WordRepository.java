@@ -1,7 +1,8 @@
-package com.example.entity.repository;
+package com.example.entity.education.repository;
 
-import com.example.entity.domain.Category;
-import com.example.entity.domain.Word;
+import com.example.entity.word.Category;
+import com.example.entity.word.Subject;
+import com.example.entity.word.Word;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -14,4 +15,6 @@ public interface WordRepository extends JpaRepository<Word, Long> {
     Word findByWordName(String wordName);
     @Query(" select w from Word w where w.category = :category")
     List<Word> findByCategory(@Param("category") Category category);
+
+    List<Word> findBySubject(Subject subject);
 }

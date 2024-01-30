@@ -1,6 +1,6 @@
 package com.example.entity.repository;
 
-import com.example.entity.domain.QuizroomWord;
+import com.example.entity.multiplay.domain.QuizroomWord;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

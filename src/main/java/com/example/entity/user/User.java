@@ -1,5 +1,7 @@
-package com.example.entity.domain;
+package com.example.entity.user;
 
+import com.example.entity.multiplay.domain.Quizroom;
+import com.example.entity.singleplay.domain.SingleHistory;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -25,9 +27,9 @@ public class User {
     // unique key
     private String email;
 
-    @OneToMany(mappedBy = "user")
-    @Builder.Default
-    private List<Bookmark> bookmarkList = new ArrayList<>();
+//    @OneToMany(mappedBy = "user")
+//    @Builder.Default
+//    private List<Bookmark> bookmarkList = new ArrayList<>();
 
     @OneToMany(mappedBy = "user")
     @Builder.Default

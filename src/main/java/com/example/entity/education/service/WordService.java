@@ -1,13 +1,13 @@
 package com.example.entity.education.service;
 
-import com.example.entity.domain.Category;
-import com.example.entity.domain.Word;
+import com.example.entity.word.Category;
+import com.example.entity.education.dto.WordDTO;
 
 import java.util.List;
 
 public interface WordService {
 
-    List<Word> getWordsByCategory(Category category);
+    List<WordDTO.WordResponseDto> findAllWords();
 
-    List<Word> findAllWords();
+    List<WordDTO.WordResponseDto> findWordsByCategory(Category category);
 }

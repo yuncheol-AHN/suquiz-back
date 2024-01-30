@@ -1,5 +1,7 @@
-package com.example.entity.domain;
+package com.example.entity.bookmark.domain;
 
+import com.example.entity.word.Word;
+import com.example.entity.user.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,18 +13,18 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 @Getter
-public class FriendRelationship {
+public class Bookmark { // user - word
 
     @Id @GeneratedValue
+    @Column(name = "bookmark_id")
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    private User fromUser;
+//    @JoinColumn(name = "user_id")
+    private User user;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    private User toUser;
-
-    private boolean isFriend;
-
+//    @JoinColumn(name = "word_id")
+    private Word word;
 
 }

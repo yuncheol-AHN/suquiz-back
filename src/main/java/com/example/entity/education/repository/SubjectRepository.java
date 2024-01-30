@@ -1,6 +1,6 @@
-package com.example.entity.repository;
+package com.example.entity.education.repository;
 
-import com.example.entity.domain.Subject;
+import com.example.entity.word.Subject;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

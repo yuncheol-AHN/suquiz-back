@@ -1,4 +1,4 @@
-package com.example.entity.domain;
+package com.example.entity.chatting.domain;
 
 
 import jakarta.persistence.Entity;

@@ -1,4 +1,4 @@
-package com.example.entity.domain;
+package com.example.entity.word;
 
 public enum Category {
     CONSONANT, VOWEL, NUMBER, WORD

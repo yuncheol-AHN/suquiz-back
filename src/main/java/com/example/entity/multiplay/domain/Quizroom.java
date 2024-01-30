@@ -1,5 +1,6 @@
-package com.example.entity.domain;
+package com.example.entity.multiplay.domain;
 
+import com.example.entity.user.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

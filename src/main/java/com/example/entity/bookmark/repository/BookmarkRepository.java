@@ -1,4 +1,4 @@
-package com.example.entity.repository;
+package com.example.entity.bookmark.repository;
 
 import com.example.entity.bookmark.domain.Bookmark;
 import com.example.entity.user.User;

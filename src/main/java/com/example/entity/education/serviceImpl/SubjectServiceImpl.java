@@ -16,7 +16,6 @@ import java.util.List;
 public class SubjectServiceImpl implements SubjectService {
     private final SubjectRepository subjectRepository;
     private final EntityAndDtoConversionService conversionService;
-    private final WordServiceImpl wordService;
 
     @Override
     public List<SubjectDTO.AllSubject> findAll() {

@@ -21,7 +21,7 @@ public class BookmarkController {
         return new ResponseEntity<>(CommonResponse.builder()
                 .status(HttpStatus.OK.value())
                 .message("유저가 북마크한 모든 단어 조회 성공")
-                .list(allByUser)
+                .data(allByUser)
                 .build(), HttpStatus.OK);
     }
 
@@ -33,7 +33,7 @@ public class BookmarkController {
         return new ResponseEntity<>(CommonResponse.builder()
                 .status(HttpStatus.OK.value())
                 .message("북마크에 단어 추가")
-                .list(BookmarkDTO.addResponse.builder().isBookmarked(true).build())
+                .data(BookmarkDTO.addResponse.builder().isBookmarked(true).build())
                 .build(), HttpStatus.OK);
     }
 
@@ -45,7 +45,7 @@ public class BookmarkController {
         return new ResponseEntity<>(CommonResponse.builder()
                 .status(HttpStatus.OK.value())
                 .message("북마크에서 단어 삭제")
-                .list(BookmarkDTO.deleteResponse.builder().isBookmarked(false).build())
+                .data(BookmarkDTO.deleteResponse.builder().isBookmarked(false).build())
                 .build(), HttpStatus.OK);
     }
 }

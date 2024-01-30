@@ -2,6 +2,7 @@ package com.example.entity.bookmark.repository;
 
 import com.example.entity.bookmark.domain.Bookmark;
 import com.example.entity.user.domain.User;
+import com.example.entity.word.domain.Word;
 import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

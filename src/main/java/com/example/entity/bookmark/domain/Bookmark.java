@@ -1,7 +1,7 @@
 package com.example.entity.bookmark.domain;
 
-import com.example.entity.word.Word;
-import com.example.entity.user.User;
+import com.example.entity.user.domain.User;
+import com.example.entity.word.domain.Word;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -20,11 +20,10 @@ public class Bookmark { // user - word
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "user_id")
     private User user;
 
     @ManyToOne(fetch = FetchType.LAZY)
 //    @JoinColumn(name = "word_id")
     private Word word;
-
 }

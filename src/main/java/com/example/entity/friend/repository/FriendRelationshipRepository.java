@@ -1,4 +1,4 @@
-package com.example.entity.repository;
+package com.example.entity.friend.repository;
 
 import com.example.entity.friend.domain.FriendRelationship;
 import org.springframework.data.jpa.repository.JpaRepository;

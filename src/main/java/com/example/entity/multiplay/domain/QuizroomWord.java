@@ -1,6 +1,6 @@
 package com.example.entity.multiplay.domain;
 
-import com.example.entity.word.Word;
+import com.example.entity.word.domain.Word;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

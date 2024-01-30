@@ -2,30 +2,37 @@ package com.example.entity.repository;
 
 import com.example.entity.bookmark.domain.Bookmark;
 import com.example.entity.bookmark.repository.BookmarkRepository;
-import com.example.entity.word.Category;
-import com.example.entity.word.Subject;
-import com.example.entity.word.Word;
-import com.example.entity.education.repository.SubjectRepository;
-import com.example.entity.education.repository.WordRepository;
-import com.example.entity.user.User;
+import com.example.entity.user.domain.User;
+import com.example.entity.user.repository.UserRepository;
+import com.example.entity.word.domain.Category;
+import com.example.entity.word.domain.Subject;
+import com.example.entity.word.domain.Word;
+import com.example.entity.word.repository.SubjectRepository;
+import com.example.entity.word.repository.WordRepoitory;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import static org.apache.coyote.http11.Constants.a;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 @Transactional
 @Rollback(false)
 class BookmarkRepositoryTest {
 
-    @Autowired UserRepository userRepository;
+    @Autowired
+    UserRepository userRepository;
     @Autowired
     SubjectRepository subjectRepository;
     @Autowired
-    WordRepository wordRepository;
+    WordRepoitory wordRepoitory;
     @Autowired
     BookmarkRepository bookmarkRepository;
 
@@ -82,8 +89,8 @@ class BookmarkRepositoryTest {
                 .build();
 
         subjectRepository.save(fruit);
-        wordRepository.save(apple);
-        wordRepository.save(banana);
+        wordRepoitory.save(apple);
+        wordRepoitory.save(banana);
 
         Bookmark bookmark_apple = Bookmark.builder()
                 .user(chulsu)

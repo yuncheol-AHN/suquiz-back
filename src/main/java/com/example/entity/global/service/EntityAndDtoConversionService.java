@@ -1,15 +1,15 @@
 package com.example.entity.global.service;
 
-import com.example.entity.repository.UserRepository;
+import com.example.entity.user.repository.UserRepository;
 import com.example.entity.singleplay.domain.SingleHistory;
 import com.example.entity.singleplay.dto.SingleHistoryDto;
-import com.example.entity.user.User;
-import com.example.entity.word.Subject;
-import com.example.entity.word.Word;
+import com.example.entity.user.domain.User;
+import com.example.entity.word.domain.Subject;
+import com.example.entity.word.domain.Word;
 import com.example.entity.education.dto.SubjectDTO;
 import com.example.entity.education.dto.WordDTO;
-import com.example.entity.education.repository.SubjectRepository;
-import com.example.entity.education.repository.WordRepository;
+import com.example.entity.word.repository.SubjectRepository;
+import com.example.entity.word.repository.WordRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 

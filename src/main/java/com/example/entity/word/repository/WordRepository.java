@@ -1,8 +1,8 @@
-package com.example.entity.education.repository;
+package com.example.entity.word.repository;
 
-import com.example.entity.word.Category;
-import com.example.entity.word.Subject;
-import com.example.entity.word.Word;
+import com.example.entity.word.domain.Category;
+import com.example.entity.word.domain.Subject;
+import com.example.entity.word.domain.Word;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

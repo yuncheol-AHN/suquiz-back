@@ -23,7 +23,7 @@ public class SingleHistoryController {
         return new ResponseEntity<>(CommonResponse.builder()
                 .status(HttpStatus.OK.value())
                 .message("isSolved daily wordle")
-                .list(singleHistoryService.dailyIsSolved(email))
+                .data(singleHistoryService.dailyIsSolved(email))
                 .build(), HttpStatus.OK);
     }
 

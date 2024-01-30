@@ -1,7 +1,7 @@
 package com.example.entity.socialLogin.oauth.controller;
 
-import com.example.entity.user.User;
-import com.example.entity.repository.UserRepository;
+import com.example.entity.user.domain.User;
+import com.example.entity.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

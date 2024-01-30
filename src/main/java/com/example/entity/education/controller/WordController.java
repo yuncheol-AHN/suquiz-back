@@ -1,6 +1,6 @@
 package com.example.entity.education.controller;
 
-import com.example.entity.word.Category;
+import com.example.entity.word.domain.Category;
 import com.example.entity.education.dto.WordDTO;
 import com.example.entity.education.service.WordService;
 import com.example.entity.global.dto.CommonResponse;
@@ -26,7 +26,7 @@ public class WordController {
         return new ResponseEntity<>(CommonResponse.builder()
                 .status(HttpStatus.OK.value())
                 .message("단어 조회 성공")
-                .list(allWords)
+                .data(allWords)
                 .build(), HttpStatus.OK);
     }
 
@@ -37,7 +37,7 @@ public class WordController {
         return new ResponseEntity<>(CommonResponse.builder()
                 .status(HttpStatus.OK.value())
                 .message("카테고리별 단어 조회 성공")
-                .list(wordsInCategory)
+                .data(wordsInCategory)
                 .build(), HttpStatus.OK);
     }
 

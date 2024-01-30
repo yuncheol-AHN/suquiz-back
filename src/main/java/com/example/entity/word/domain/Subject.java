@@ -1,4 +1,5 @@
-package com.example.entity.word;
+
+package com.example.entity.word.domain;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

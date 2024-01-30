@@ -1,11 +1,11 @@
 package com.example.entity.education.serviceImpl;
 
-import com.example.entity.word.Category;
-import com.example.entity.word.Word;
+import com.example.entity.word.domain.Category;
+import com.example.entity.word.domain.Word;
 import com.example.entity.education.dto.WordDTO;
 import com.example.entity.global.service.EntityAndDtoConversionService;
 import com.example.entity.education.service.WordService;
-import com.example.entity.education.repository.WordRepository;
+import com.example.entity.word.repository.WordRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

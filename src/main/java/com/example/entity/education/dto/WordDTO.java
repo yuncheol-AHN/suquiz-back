@@ -1,6 +1,6 @@
 package com.example.entity.education.dto;
 
-import com.example.entity.word.Category;
+import com.example.entity.word.domain.Category;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

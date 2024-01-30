@@ -1,10 +1,15 @@
-package com.example.entity.word;
+
+package com.example.entity.word.domain;
+
 
 import jakarta.persistence.*;
 import lombok.*;
 
 
+
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
+
+@Builder(toBuilder = true)
 @AllArgsConstructor
 @Entity
 @Getter
@@ -61,10 +66,12 @@ public class Word {
         if (this.subject != null) {
             this.subject.getWordList().remove(this);
         }
+
         // 새로 들어오는 주제가 빈값이 아니면
         if (newSubject != null && !newSubject.getWordList().contains(this)) {
             newSubject.getWordList().add(this);
         }
+
         // 현재 단어의 주제를 바꿔준다
         this.subject = newSubject;
     }

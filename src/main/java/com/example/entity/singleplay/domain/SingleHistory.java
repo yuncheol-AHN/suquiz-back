@@ -1,7 +1,7 @@
 package com.example.entity.singleplay.domain;
 
 
-import com.example.entity.user.User;
+import com.example.entity.user.domain.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

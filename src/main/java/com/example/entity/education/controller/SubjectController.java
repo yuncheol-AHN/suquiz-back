@@ -25,7 +25,7 @@ public class SubjectController {
         return new ResponseEntity<>(CommonResponse.builder()
                 .status(HttpStatus.OK.value())
                 .message("모든 주제 출력")
-                .list(list)
+                .data(list)
                 .build(), HttpStatus.OK);
     }
 
@@ -35,7 +35,7 @@ public class SubjectController {
         return new ResponseEntity<>(CommonResponse.builder()
                 .status(HttpStatus.OK.value())
                 .message("주제에 관련된 내용 전부 조회")
-                .list(findSub)
+                .data(findSub)
                 .build(), HttpStatus.OK);
     }
 }

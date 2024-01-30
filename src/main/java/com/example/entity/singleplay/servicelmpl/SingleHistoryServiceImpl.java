@@ -1,11 +1,11 @@
 package com.example.entity.singleplay.servicelmpl;
 
-import com.example.entity.user.User;
+import com.example.entity.user.domain.User;
 import com.example.entity.singleplay.dto.SingleHistoryDto;
 import com.example.entity.singleplay.domain.SingleHistory;
 import com.example.entity.singleplay.service.SingleHistoryService;
 import com.example.entity.singleplay.repository.SingleHistoryRepository;
-import com.example.entity.repository.UserRepository;
+import com.example.entity.user.repository.UserRepository;
 import com.example.entity.global.service.EntityAndDtoConversionService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

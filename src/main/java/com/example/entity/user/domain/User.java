@@ -1,7 +1,14 @@
-package com.example.entity.user;
+
+package com.example.entity.user.domain;
 
 import com.example.entity.multiplay.domain.Quizroom;
 import com.example.entity.singleplay.domain.SingleHistory;
+
+
+import com.example.entity.bookmark.domain.Bookmark;
+import com.example.entity.singleplay.domain.SingleHistory;
+import com.example.entity.multiplay.domain.Quizroom;
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -59,4 +66,7 @@ public class User {
         this.oAuthProvider = oAuthProvider;
     }
 
+    public void changeQuizroom(Quizroom quizroom) {
+        this.quizroom = quizroom;
+    }
 }

@@ -38,7 +38,7 @@ public class QuizroomTest {
                 .level(10)
                 .exp(300)
                 .isPlaying(false)
-                .recentCorrectCount(30)
+//                .recentCorrectCount(30)
                 .maxCorrectCount(20)
                 .imageUrl("image.com")
                 .build();
@@ -58,7 +58,7 @@ public class QuizroomTest {
                 .level(10)
                 .exp(300)
                 .isPlaying(false)
-                .recentCorrectCount(30)
+//                .recentCorrectCount(30)
                 .maxCorrectCount(20)
                 .imageUrl("image.com")
                 .build();
@@ -68,7 +68,7 @@ public class QuizroomTest {
                 .level(10)
                 .exp(300)
                 .isPlaying(false)
-                .recentCorrectCount(30)
+//                .recentCorrectCount(30)
                 .maxCorrectCount(20)
                 .imageUrl("image.com")
                 .build();
@@ -78,7 +78,7 @@ public class QuizroomTest {
                 .level(10)
                 .exp(300)
                 .isPlaying(false)
-                .recentCorrectCount(30)
+//                .recentCorrectCount(30)
                 .maxCorrectCount(20)
                 .imageUrl("image.com")
                 .build();
@@ -88,7 +88,7 @@ public class QuizroomTest {
                 .level(10)
                 .exp(300)
                 .isPlaying(false)
-                .recentCorrectCount(30)
+//                .recentCorrectCount(30)
                 .maxCorrectCount(20)
                 .imageUrl("image.com")
                 .build();

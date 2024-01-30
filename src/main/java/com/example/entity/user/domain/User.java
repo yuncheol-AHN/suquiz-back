@@ -55,8 +55,9 @@ public class User {
     // refresh token
 
     private boolean isPlaying;
-    private int recentCorrectCount;
-    private int maxCorrectCount;
+    private int correctCount;   // 최근 연속 정답
+    private int solveCount;     // 최근 연속 풀이
+    private int maxCorrectCount;// 최다 연속 정답
     private String imageUrl;
 
     @Builder

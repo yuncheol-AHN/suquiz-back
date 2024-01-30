@@ -1,6 +1,6 @@
 package com.example.entity.socialLogin.oauth.oauthApi.response;
 
-import com.example.entity.domain.OAuthProvider;
+import com.example.entity.user.domain.OAuthProvider;
 import com.example.entity.socialLogin.oauth.oauthApi.client.OAuthApiClient;
 import com.example.entity.socialLogin.oauth.oauthApi.client.RevokeTokenResponseDto;
 import com.example.entity.socialLogin.oauth.oauthApi.params.OAuthLoginParams;

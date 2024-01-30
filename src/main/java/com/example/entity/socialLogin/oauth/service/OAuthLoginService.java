@@ -1,7 +1,7 @@
 package com.example.entity.socialLogin.oauth.service;
 
-import com.example.entity.domain.User;
-import com.example.entity.repository.UserRepository;
+import com.example.entity.user.domain.User;
+import com.example.entity.user.repository.UserRepository;
 import com.example.entity.socialLogin.oauth.oauthApi.params.OAuthLoginParams;
 import com.example.entity.socialLogin.oauth.oauthApi.response.OAuthInfoResponse;
 import com.example.entity.socialLogin.oauth.tokens.AuthTokens;

@@ -1,8 +1,15 @@
 package com.example.entity.repository;
 
-import com.example.entity.domain.*;
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.PersistenceContext;
+import com.example.entity.multiplay.domain.Quizroom;
+import com.example.entity.multiplay.domain.QuizroomWord;
+import com.example.entity.multiplay.repository.QuizroomRepository;
+import com.example.entity.multiplay.repository.QuizroomWordRepository;
+import com.example.entity.user.repository.UserRepository;
+import com.example.entity.word.domain.Category;
+import com.example.entity.word.domain.Subject;
+import com.example.entity.word.domain.Word;
+import com.example.entity.word.repository.SubjectRepository;
+import com.example.entity.word.repository.WordRepoitory;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -15,11 +22,16 @@ import java.util.List;
 @Transactional
 @Rollback(value = false)
 class QuizroomRepositoryTest {
-    @Autowired UserRepository userRepository;
-    @Autowired QuizroomWordRepository quizroomWordRepository;
-    @Autowired QuizroomRepository quizroomRepository;
-    @Autowired WordRepoitory wordRepoitory;
-    @Autowired SubjectRepository subjectRepository;
+    @Autowired
+    UserRepository userRepository;
+    @Autowired
+    QuizroomWordRepository quizroomWordRepository;
+    @Autowired
+    QuizroomRepository quizroomRepository;
+    @Autowired
+    WordRepoitory wordRepoitory;
+    @Autowired
+    SubjectRepository subjectRepository;
 
     //
     @Test

@@ -1,16 +1,16 @@
 package com.example.entity.repository;
 
-import com.example.entity.domain.Category;
-import com.example.entity.domain.Subject;
-import com.example.entity.domain.Word;
+import com.example.entity.word.domain.Category;
+import com.example.entity.word.domain.Subject;
+import com.example.entity.word.domain.Word;
+import com.example.entity.word.repository.SubjectRepository;
+import com.example.entity.word.repository.WordRepoitory;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.util.ArrayList;
 
 import static org.assertj.core.api.Assertions.*;
 
@@ -19,8 +19,10 @@ import static org.assertj.core.api.Assertions.*;
 @Rollback(value = false)
 class WordRepoitoryTest {
 
-    @Autowired WordRepoitory wordRepoitory;
-    @Autowired SubjectRepository subjectRepository;
+    @Autowired
+    WordRepoitory wordRepoitory;
+    @Autowired
+    SubjectRepository subjectRepository;
 
     @Test
     public void createWord() throws Exception {

@@ -6,6 +6,9 @@ import com.example.entity.singleplay.dto.SingleHistoryDto;
 import com.example.entity.user.domain.User;
 import com.example.entity.word.domain.Subject;
 import com.example.entity.word.domain.Word;
+import com.example.entity.bookmark.domain.Bookmark;
+import com.example.entity.bookmark.dto.BookmarkDTO;
+
 import com.example.entity.education.dto.SubjectDTO;
 import com.example.entity.education.dto.WordDTO;
 import com.example.entity.word.repository.SubjectRepository;
@@ -85,6 +88,37 @@ public class EntityAndDtoConversionService {
                 .correct(singleHistory.isCorrect())
                 .resultText(singleHistory.getResultText())
                 .build();
+    }
+
+    // Bookmark Conversion
+    public Bookmark addBookmarkDtoToEntity(BookmarkDTO.addRequest addRequest) {
+
+        Optional<User> findUser = userRepository.findByEmail(addRequest.getUserEmail());
+        Word findWord = wordRepository.findByWordName(addRequest.getWordName());
+
+        return findUser.map(user -> Bookmark.builder()
+                .user(user)
+                .word(findWord)
+                .build()).orElse(null);
+    }
+
+    public BookmarkDTO.checkResponse checkBookmarkEntityToDto(List<Bookmark> bookmarks) {
+
+        List<WordDTO.WordResponseDto> wordDtoList = converWordListToDtoList(bookmarks);
+        return BookmarkDTO.checkResponse.builder()
+                .wordList(wordDtoList)
+                .build();
+    }
+
+    private List<WordDTO.WordResponseDto> converWordListToDtoList(List<Bookmark> bookmarks) {
+        return bookmarks.stream()
+                .map(bookmark -> WordDTO.WordResponseDto.builder()
+                        .wordName(bookmark.getWord().getWordName())
+                        .subjectName(bookmark.getWord().getSubject().getSubjectName())
+                        .category(bookmark.getWord().getCategory().name())
+                        .videoUrl(bookmark.getWord().getVideoUrl())
+                        .build())
+                .collect(Collectors.toList());
     }
 
 }

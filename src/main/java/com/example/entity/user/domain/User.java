@@ -56,7 +56,8 @@ public class User {
     // provider
     // refresh token
 
-    private boolean isPlaying;
+    @Builder.Default
+    private boolean isPlaying = false;
     private int correctCount;   // 최근 연속 정답
     private int solveCount;     // 최근 연속 풀이
     private int maxCorrectCount;// 최다 연속 정답
@@ -68,9 +69,7 @@ public class User {
 //        this.oAuthProvider = oAuthProvider;
 //    }
 
-    public void changeNickname(String nickname) {
-        this.nickname = nickname;
-    }
+
 
     public void changeNickname(String modifiedName) {
         this.nickname = modifiedName;
@@ -80,5 +79,19 @@ public class User {
         this.quizroom = quizroom;
     }
 
-    
+    public void updateIsPlaying() {
+        isPlaying = !isPlaying;
+    }
+
+    public void addExp(int score) {
+        this.exp += score*5;
+    }
+
+    public void updateExp(int exp) {
+        this.exp = exp;
+    }
+
+    public void levelUp() {
+        this.level += 1;
+    }
 }

@@ -1,9 +1,7 @@
 package com.example.entity.repository;
 
 import com.example.entity.multiplay.domain.Quizroom;
-import com.example.entity.multiplay.domain.QuizroomWord;
 import com.example.entity.multiplay.repository.QuizroomRepository;
-import com.example.entity.multiplay.repository.QuizroomWordRepository;
 import com.example.entity.user.repository.UserRepository;
 import com.example.entity.word.domain.Category;
 import com.example.entity.word.domain.Subject;
@@ -25,8 +23,8 @@ import java.util.List;
 class QuizroomRepositoryTest {
     @Autowired
     UserRepository userRepository;
-    @Autowired
-    QuizroomWordRepository quizroomWordRepository;
+//    @Autowired
+//    QuizroomWordRepository quizroomWordRepository;
     @Autowired
     QuizroomRepository quizroomRepository;
     @Autowired
@@ -37,53 +35,53 @@ class QuizroomRepositoryTest {
     //
     @Test
     public void 퀴즈테스트() throws Exception {
-        // given
-        Quizroom quizRoom = Quizroom.builder()
-                .inviteCode("1234567")
-                .build();
-        /**
-         * quizRoom 생성
-         * -> word 테이블에서 word 랜덤으로 조회
-         * -> quizRoom과 word로 구성된 quizRoomWord생성
-         * -> quizRoom에 quizRoomWord삽입
-         * -> 나중에 quizRoom.quizRoomWord.word로 quizRoom에 있는 단어찾기
-         *
-         */
-
-        Subject fruit = Subject.builder()
-                .subjectName("fruit").build();
-
-        Word wordA = Word.builder()
-                .category(Category.WORD)
-                .subject(fruit)
-                .wordName("사과")
-                .videoUrl("1A")
-                .build();
-
-        Word wordB = Word.builder()
-                .category(Category.WORD)
-                .subject(fruit)
-                .wordName("바나나")
-                .videoUrl("1A")
-                .build();
-
-        QuizroomWord quizroomWord = QuizroomWord.builder()
-                .quizroom(quizRoom)
-                .word(wordA)
-                .build();
-
-        // when
-        subjectRepository.save(fruit);
-        quizroomRepository.save(quizRoom);
-        wordRepository.save(wordA);
-        wordRepository.save(wordB);
-        QuizroomWord saveQuizroom = quizroomWordRepository.save(quizroomWord);
-        List<QuizroomWord> quizroomWordList = saveQuizroom.getQuizroom().getQuizroomWordList();
-        System.out.println("quizroomWordList = " + quizroomWordList);
-        // then
-        for (QuizroomWord word : quizroomWordList) {
-            System.out.println("word = " + word);
-        }
+//        // given
+//        Quizroom quizRoom = Quizroom.builder()
+//                .inviteCode("1234567")
+//                .build();
+//        /**
+//         * quizRoom 생성
+//         * -> word 테이블에서 word 랜덤으로 조회
+//         * -> quizRoom과 word로 구성된 quizRoomWord생성
+//         * -> quizRoom에 quizRoomWord삽입
+//         * -> 나중에 quizRoom.quizRoomWord.word로 quizRoom에 있는 단어찾기
+//         *
+//         */
+//
+//        Subject fruit = Subject.builder()
+//                .subjectName("fruit").build();
+//
+//        Word wordA = Word.builder()
+//                .category(Category.WORD)
+//                .subject(fruit)
+//                .wordName("사과")
+//                .videoUrl("1A")
+//                .build();
+//
+//        Word wordB = Word.builder()
+//                .category(Category.WORD)
+//                .subject(fruit)
+//                .wordName("바나나")
+//                .videoUrl("1A")
+//                .build();
+//
+//        QuizroomWord quizroomWord = QuizroomWord.builder()
+//                .quizroom(quizRoom)
+//                .word(wordA)
+//                .build();
+//
+//        // when
+//        subjectRepository.save(fruit);
+//        quizroomRepository.save(quizRoom);
+//        wordRepository.save(wordA);
+//        wordRepository.save(wordB);
+//        QuizroomWord saveQuizroom = quizroomWordRepository.save(quizroomWord);
+//        List<QuizroomWord> quizroomWordList = saveQuizroom.getQuizroom().getQuizroomWordList();
+//        System.out.println("quizroomWordList = " + quizroomWordList);
+//        // then
+//        for (QuizroomWord word : quizroomWordList) {
+//            System.out.println("word = " + word);
+//        }
 
 
 

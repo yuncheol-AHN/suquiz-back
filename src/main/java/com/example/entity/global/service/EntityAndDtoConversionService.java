@@ -1,5 +1,6 @@
 package com.example.entity.global.service;
 
+import com.example.entity.friend.dto.FriendDto;
 import com.example.entity.user.repository.UserRepository;
 import com.example.entity.singleplay.domain.SingleHistory;
 import com.example.entity.singleplay.dto.SingleHistoryDto;
@@ -119,6 +120,10 @@ public class EntityAndDtoConversionService {
                         .videoUrl(bookmark.getWord().getVideoUrl())
                         .build())
                 .collect(Collectors.toList());
+    }
+
+    public FriendDto.Response userEntityToFriendDtoResponse(User user) {
+        return FriendDto.Response.builder().nickname(user.getNickname()).level(user.getLevel()).build();
     }
 
 }

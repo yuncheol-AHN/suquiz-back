@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
 import java.util.Optional;
 
 @Repository
@@ -17,4 +18,11 @@ public interface UserRepository extends JpaRepository<User, Long> {
     @Query("select u from User u where u.email = :email and u.oAuthProvider = :oauthProvider")
     User findByEmailAndOAuthProvider(@Param("email") String email, @Param("oauthProvider") OAuthProvider oAuthProvider);
     boolean existsByEmail(String email);
+
+    @Query("select u from User u where u.nickname like %:nickname%")
+    List<User> findAllByNickname(@Param("nickname") String nickname);
+
+    User findByNickname(String Nickname);
+
+
 }

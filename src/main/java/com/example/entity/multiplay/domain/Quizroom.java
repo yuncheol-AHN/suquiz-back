@@ -25,15 +25,13 @@ public class Quizroom {
     @Builder.Default
     private List<User> userList = new ArrayList<>();
 
-    @OneToMany(mappedBy = "quizroom", cascade = CascadeType.ALL)
-    @Builder.Default
-    List<QuizroomWord> quizroomWordList = new ArrayList<>();
+//    @OneToMany(mappedBy = "quizroom", cascade = CascadeType.ALL)
+//    @Builder.Default
+//    List<QuizroomWord> quizroomWordList = new ArrayList<>();
 
     @Builder.Default
     private boolean isPlaying = false;  // 게임 진행중 여부
 
-//  private int participantsCount;  // 참가자 수
-//  유저 리스트에서 참가인원 수를 체크하는 방식으로 사용하면 될듯 하여, deprecated 함
     private String inviteCode;  // 초대 코드
 
 
@@ -42,5 +40,7 @@ public class Quizroom {
         this.userList.add(user);
     }
 
-
+    public void updateIsPlaying() {
+        isPlaying = !isPlaying;
+    }
 }

@@ -53,8 +53,9 @@ public class User {
 
     // provider
     // refresh token
-
-    private boolean isPlaying;
+    @Builder.Default
+    private boolean isPlaying = false
+            ;
     private int recentCorrectCount;
     private int maxCorrectCount;
     private String imageUrl;
@@ -68,5 +69,21 @@ public class User {
 
     public void changeQuizroom(Quizroom quizroom) {
         this.quizroom = quizroom;
+    }
+
+    public void updateIsPlaying() {
+        isPlaying = !isPlaying;
+    }
+
+    public void addExp(int score) {
+        this.exp += score*5;
+    }
+
+    public void updateExp(int exp) {
+        this.exp = exp;
+    }
+
+    public void levelUp() {
+        this.level += 1;
     }
 }

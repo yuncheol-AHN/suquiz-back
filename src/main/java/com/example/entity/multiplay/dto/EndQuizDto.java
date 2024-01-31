@@ -1,6 +1,5 @@
 package com.example.entity.multiplay.dto;
 
-import com.example.entity.multiplay.domain.QuizroomWord;
 import com.example.entity.user.domain.User;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,15 +8,23 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
-public class QuizroomDto {
+public class EndQuizDto {
     @Data
     @Builder
     @NoArgsConstructor
     @AllArgsConstructor
-    static class Response {
-        List<User> userList;
-        List<QuizroomWord> quizroomWordList;
-        boolean isPlaying;
-        String inviteCode;
+    public static class Request {
+        int score;
+        long userId;
+    }
+
+    @Data
+    @Builder
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class Response {
+        long userId;
+        int exp;
+        int level;
     }
 }

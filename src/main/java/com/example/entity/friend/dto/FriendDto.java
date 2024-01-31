@@ -1,27 +1,32 @@
-package com.example.entity.multiplay.dto;
+package com.example.entity.friend.dto;
 
-import com.example.entity.multiplay.domain.Quizroom;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+public class FriendDto {
 
-public class QuizroomWordDto {
     @Data
     @Builder
     @NoArgsConstructor
     @AllArgsConstructor
-    static class request {
-        Quizroom quizroom;
+    public static class Request {
+        String fromUserNickname;
+        String ToUserNickname;
+
+
     }
 
     @Data
     @Builder
     @NoArgsConstructor
     @AllArgsConstructor
-    static class response {
-        QuizroomDto quizroom;
+    public static class Response {
+        String nickname;
+        int level;
 
     }
+
+
 }

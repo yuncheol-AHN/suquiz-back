@@ -23,7 +23,10 @@ public class FriendRelationship {
     @ManyToOne(fetch = FetchType.LAZY)
     private User toUser;
 
-    private boolean isFriend;
+    @Builder.Default
+    private boolean isFriend = false;
 
-
+    public void updateIsFriend() {
+        this.isFriend = !isFriend;
+    }
 }

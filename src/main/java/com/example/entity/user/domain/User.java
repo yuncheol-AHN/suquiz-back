@@ -38,7 +38,7 @@ public class User {
 //    @Builder.Default
 //    private List<Bookmark> bookmarkList = new ArrayList<>();
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     @Builder.Default
     private List<SingleHistory> singleHistoryList = new ArrayList<>();
 
@@ -49,6 +49,8 @@ public class User {
     private String nickname;
     private int level;
     private int exp;
+
+    @Enumerated(EnumType.STRING)
     private OAuthProvider oAuthProvider;
 
     // provider
@@ -59,11 +61,14 @@ public class User {
     private int maxCorrectCount;
     private String imageUrl;
 
-    @Builder
-    public User(String email, String nickname, OAuthProvider oAuthProvider) {
-        this.email = email;
+//    @Builder(toBuilder = true)
+//    public User(String email, OAuthProvider oAuthProvider) {
+//        this.email = email;
+//        this.oAuthProvider = oAuthProvider;
+//    }
+
+    public void changeNickname(String nickname) {
         this.nickname = nickname;
-        this.oAuthProvider = oAuthProvider;
     }
 
     public void changeQuizroom(Quizroom quizroom) {

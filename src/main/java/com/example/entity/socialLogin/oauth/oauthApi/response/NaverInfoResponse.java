@@ -24,10 +24,10 @@ public class NaverInfoResponse implements OAuthInfoResponse {
         return response.email;
     }
 
-    @Override
-    public String getNickname() {
-        return response.nickname;
-    }
+//    @Override
+//    public String getNickname() {
+//        return response.nickname;
+//    }
 
     @Override
     public OAuthProvider getOAuthProvider() {

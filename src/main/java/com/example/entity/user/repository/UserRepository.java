@@ -22,7 +22,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
     @Query("select u from User u where u.nickname like %:nickname%")
     List<User> findAllByNickname(@Param("nickname") String nickname);
 
-    User findByNickname(String Nickname);
+
 
 
 }

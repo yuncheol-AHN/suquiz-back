@@ -39,7 +39,6 @@ class FriendRelationshipServiceImplTest {
                 .level(1)
                 .exp(300)
                 .isPlaying(false)
-                .recentCorrectCount(30)
                 .maxCorrectCount(20)
                 .imageUrl("image.com")
                 .build();
@@ -50,7 +49,6 @@ class FriendRelationshipServiceImplTest {
                 .level(5)
                 .exp(300)
                 .isPlaying(false)
-                .recentCorrectCount(30)
                 .maxCorrectCount(20)
                 .imageUrl("image.com")
                 .build();
@@ -60,7 +58,6 @@ class FriendRelationshipServiceImplTest {
                 .level(10)
                 .exp(300)
                 .isPlaying(false)
-                .recentCorrectCount(30)
                 .maxCorrectCount(20)
                 .imageUrl("image.com")
                 .build();

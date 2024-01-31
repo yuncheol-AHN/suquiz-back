@@ -59,7 +59,6 @@ public class QuizroomServiceImplTest {
                 .level(10)
                 .exp(300)
                 .isPlaying(false)
-                .recentCorrectCount(30)
                 .maxCorrectCount(20)
                 .imageUrl("image.com")
                 .build();
@@ -79,7 +78,6 @@ public class QuizroomServiceImplTest {
                 .level(10)
                 .exp(300)
                 .isPlaying(false)
-                .recentCorrectCount(30)
                 .maxCorrectCount(20)
                 .imageUrl("image.com")
                 .build();
@@ -89,7 +87,6 @@ public class QuizroomServiceImplTest {
                 .level(10)
                 .exp(300)
                 .isPlaying(false)
-                .recentCorrectCount(30)
                 .maxCorrectCount(20)
                 .imageUrl("image.com")
                 .build();
@@ -99,7 +96,6 @@ public class QuizroomServiceImplTest {
                 .level(10)
                 .exp(300)
                 .isPlaying(false)
-                .recentCorrectCount(30)
                 .maxCorrectCount(20)
                 .imageUrl("image.com")
                 .build();
@@ -109,7 +105,6 @@ public class QuizroomServiceImplTest {
                 .level(10)
                 .exp(300)
                 .isPlaying(false)
-                .recentCorrectCount(30)
                 .maxCorrectCount(20)
                 .imageUrl("image.com")
                 .build();
@@ -141,7 +136,6 @@ public class QuizroomServiceImplTest {
                 .level(10)
                 .exp(300)
                 .isPlaying(false)
-                .recentCorrectCount(30)
                 .maxCorrectCount(20)
                 .imageUrl("image.com")
                 .build();
@@ -151,7 +145,6 @@ public class QuizroomServiceImplTest {
                 .level(10)
                 .exp(300)
                 .isPlaying(false)
-                .recentCorrectCount(30)
                 .maxCorrectCount(20)
                 .imageUrl("image.com")
                 .build();
@@ -161,7 +154,6 @@ public class QuizroomServiceImplTest {
                 .level(10)
                 .exp(300)
                 .isPlaying(false)
-                .recentCorrectCount(30)
                 .maxCorrectCount(20)
                 .imageUrl("image.com")
                 .build();
@@ -171,7 +163,6 @@ public class QuizroomServiceImplTest {
                 .level(10)
                 .exp(300)
                 .isPlaying(false)
-                .recentCorrectCount(30)
                 .maxCorrectCount(20)
                 .imageUrl("image.com")
                 .build();
@@ -237,7 +228,6 @@ public class QuizroomServiceImplTest {
                 .level(1)
                 .exp(0)
                 .isPlaying(false)
-                .recentCorrectCount(30)
                 .maxCorrectCount(20)
                 .imageUrl("image.com")
                 .build();
@@ -247,7 +237,6 @@ public class QuizroomServiceImplTest {
                 .level(1)
                 .exp(0)
                 .isPlaying(false)
-                .recentCorrectCount(30)
                 .maxCorrectCount(20)
                 .imageUrl("image.com")
                 .build();
@@ -257,7 +246,6 @@ public class QuizroomServiceImplTest {
                 .level(1)
                 .exp(0)
                 .isPlaying(false)
-                .recentCorrectCount(30)
                 .maxCorrectCount(20)
                 .imageUrl("image.com")
                 .build();
@@ -267,7 +255,6 @@ public class QuizroomServiceImplTest {
                 .level(1)
                 .exp(0)
                 .isPlaying(false)
-                .recentCorrectCount(30)
                 .maxCorrectCount(20)
                 .imageUrl("image.com")
                 .build();

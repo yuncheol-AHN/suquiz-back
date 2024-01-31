@@ -44,8 +44,8 @@ public class FriendRelationshipServiceImpl implements FriendRelationshipService 
 
     @Override
     public void requestFriend(FriendDto.Request req) {
-        User fromUser = userRepository.findByNickname(req.getFromUserNickname());
-        User toUser = userRepository.findByNickname(req.getToUserNickname());
+        User fromUser = userRepository.findByNickname(req.getFromUserNickname()).get();
+        User toUser = userRepository.findByNickname(req.getToUserNickname()).get();
         FriendRelationship friendRequest = FriendRelationship.builder().fromUser(fromUser).toUser(toUser).build();
         if(!friendRequest.isFriend())
             friendRequest.updateIsFriend();

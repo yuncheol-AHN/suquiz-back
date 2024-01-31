@@ -29,7 +29,7 @@ public class RequestOAuthInfoService {
         String accessToken = client.requestAccessToken(params);
         OAuthInfoResponse res = client.requestOauthInfo(accessToken);
         log.info("Object : " + res.getEmail());
-        log.info("name : "+ res.getNickname());
+//        log.info("name : "+ res.getNickname());
         log.info("kakao : " + res.getOAuthProvider());
         // 로그인 유저 정보에 대한 값들을 리턴
         return client.requestOauthInfo(accessToken);

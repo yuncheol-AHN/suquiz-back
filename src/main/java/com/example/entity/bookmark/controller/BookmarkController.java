@@ -18,6 +18,11 @@ public class BookmarkController {
     @GetMapping("/words")
     public ResponseEntity<CommonResponse> allWordsByUser(@RequestParam("user") String userEmail) {
         BookmarkDTO.checkResponse allByUser = bookmarkService.findAllByUser(userEmail);
+//        BookmarkDTO.checkResponse user2 = bookmarkService.findAllByUser(userEmail);
+//
+//        Object[] obj = new Object[2];
+//        obj[0] = allByUser;
+//        obj[1] = user2;
         return new ResponseEntity<>(CommonResponse.builder()
                 .status(HttpStatus.OK.value())
                 .message("유저가 북마크한 모든 단어 조회 성공")

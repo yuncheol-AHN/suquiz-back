@@ -1,6 +1,7 @@
 package com.example.entity.singleplay.dto;
 
 import com.example.entity.user.domain.User;
+import com.fasterxml.jackson.core.JsonFactory;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -39,10 +40,11 @@ public class SingleHistoryDto {
     @Builder
     @NoArgsConstructor
     @AllArgsConstructor
-    public static class FindResponse {
-        protected int trialCount;
-        protected boolean correct;
-        protected String resultText;
+    public static class ShareResponse {
+        private boolean correct;
+        private int trialCount;
+        private int correctCount;
+        private String resultText;
     }
 
     @Getter
@@ -64,5 +66,6 @@ public class SingleHistoryDto {
         private int correctCount;              // 최근 연속 정답
         private int maxCorrectCount;           // 연속 스트릭
         private int[] trialSpread;             // 도전 분포e
+        private int correctRate;               // 정답률
     }
 }

@@ -38,7 +38,7 @@ public class User {
 //    @Builder.Default
 //    private List<Bookmark> bookmarkList = new ArrayList<>();
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     @Builder.Default
     private List<SingleHistory> singleHistoryList = new ArrayList<>();
 
@@ -70,4 +70,6 @@ public class User {
     public void changeQuizroom(Quizroom quizroom) {
         this.quizroom = quizroom;
     }
+
+    
 }

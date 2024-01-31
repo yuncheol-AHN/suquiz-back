@@ -67,6 +67,10 @@ public class User {
         this.oAuthProvider = oAuthProvider;
     }
 
+    public void changeNickname(String modifiedName) {
+        this.nickname = modifiedName;
+    }
+
     public void changeQuizroom(Quizroom quizroom) {
         this.quizroom = quizroom;
     }

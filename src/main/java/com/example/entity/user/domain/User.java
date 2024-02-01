@@ -48,7 +48,7 @@ public class User {
 
     private String nickname;
     private int level;
-    private int xp;
+    private int exp;
 
     @Enumerated(EnumType.STRING)
     private OAuthProvider oAuthProvider;
@@ -61,7 +61,6 @@ public class User {
     private int correctCount;   // 최근 연속 정답
     private int solveCount;     // 최근 연속 풀이
     private int maxCorrectCount;// 최다 연속 정답
-
     private String imageUrl;
 
 //    @Builder(toBuilder = true)
@@ -85,11 +84,11 @@ public class User {
     }
 
     public void addExp(int score) {
-        this.xp += score*5;
+        this.exp += score*5;
     }
 
     public void updateExp(int exp) {
-        this.xp = exp;
+        this.exp = exp;
     }
 
     public void levelUp() {

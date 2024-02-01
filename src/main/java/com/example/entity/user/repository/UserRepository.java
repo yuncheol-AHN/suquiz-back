@@ -23,6 +23,6 @@ public interface UserRepository extends JpaRepository<User, Long> {
     List<User> findAllByNickname(@Param("nickname") String nickname);
 
 
-    @Query("select u from User u order by u.level desc, u.xp desc")
-    List<User> findAllOrderByExp();
+
+
 }

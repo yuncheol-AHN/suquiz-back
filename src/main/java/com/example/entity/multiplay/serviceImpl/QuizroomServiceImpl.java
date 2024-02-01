@@ -133,16 +133,16 @@ public class QuizroomServiceImpl implements QuizroomService {
                     Optional<Level> optionalLevel = levelRepository.findByLevel(userLevel+1);
                     if(optionalLevel.isPresent()) {
                         Level nextLevel = optionalLevel.get();
-                        if(user.getExp()>=nextLevel.getExp()) {
+                        if(user.getXp()>=nextLevel.getXp()) {
                             user.levelUp();
-                            user.updateExp(user.getExp()- nextLevel.getExp());
+                            user.updateExp(user.getXp()- nextLevel.getXp());
                         }
                     }
 
                     // 결과 전송
                     resultList.add(EndQuizDto.Response.builder()
                             .userId(user.getId())
-                            .exp(user.getExp())
+                            .exp(user.getXp())
                             .level(user.getLevel())
                             .build());
                 }

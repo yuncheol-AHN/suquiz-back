@@ -1,6 +1,7 @@
 package com.example.entity.global.service;
 
 import com.example.entity.friend.dto.FriendDto;
+import com.example.entity.ranking.dto.RankingDto;
 import com.example.entity.user.repository.UserRepository;
 import com.example.entity.singleplay.domain.SingleHistory;
 import com.example.entity.singleplay.dto.SingleHistoryDto;
@@ -111,7 +112,7 @@ public class EntityAndDtoConversionService {
                 .build();
     }
 
-    private List<WordDTO.WordResponseDto> converWordListToDtoList(List<Bookmark> bookmarks) {
+    public List<WordDTO.WordResponseDto> converWordListToDtoList(List<Bookmark> bookmarks) {
         return bookmarks.stream()
                 .map(bookmark -> WordDTO.WordResponseDto.builder()
                         .wordName(bookmark.getWord().getWordName())
@@ -124,6 +125,14 @@ public class EntityAndDtoConversionService {
 
     public FriendDto.Response userEntityToFriendDtoResponse(User user) {
         return FriendDto.Response.builder().nickname(user.getNickname()).level(user.getLevel()).build();
+    }
+
+    public RankingDto.RankDto userEntityToRankDto(User user) {
+        return RankingDto.RankDto.builder()
+                .exp(user.getXp())
+                .level(user.getLevel())
+                .nickname(user.getNickname())
+                .build();
     }
 
 }

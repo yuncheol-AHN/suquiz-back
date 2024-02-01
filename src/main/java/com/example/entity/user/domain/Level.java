@@ -23,5 +23,5 @@ public class Level {
     private Long id;
 
     private int level;
-    private int exp;
+    private int xp;
 }

@@ -1,6 +1,6 @@
 package com.example.entity.socialLogin.oauth.oauthApi.params;
 
-import com.example.entity.user.domain.OAuthProvider;
+import com.example.entity.domain.OAuthProvider;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.util.LinkedMultiValueMap;

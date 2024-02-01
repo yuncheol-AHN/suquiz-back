@@ -1,33 +1,29 @@
 package com.example.entity.repository;
 
-import com.example.entity.bookmark.domain.Bookmark;
-import com.example.entity.bookmark.repository.BookmarkRepository;
-import com.example.entity.user.domain.User;
-import com.example.entity.user.repository.UserRepository;
-import com.example.entity.word.domain.Category;
-import com.example.entity.word.domain.Subject;
-import com.example.entity.word.domain.Word;
-import com.example.entity.word.repository.SubjectRepository;
-import com.example.entity.word.repository.WordRepository;
+import com.example.entity.domain.*;
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import static org.apache.coyote.http11.Constants.a;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.*;
+
 @SpringBootTest
 @Transactional
 @Rollback(false)
 class BookmarkRepositoryTest {
 
-    @Autowired
-    UserRepository userRepository;
-    @Autowired
-    SubjectRepository subjectRepository;
-    @Autowired
-    WordRepository wordRepository;
-    @Autowired
-    BookmarkRepository bookmarkRepository;
+    @Autowired UserRepository userRepository;
+    @Autowired SubjectRepository subjectRepository;
+    @Autowired WordRepoitory wordRepoitory;
+    @Autowired BookmarkRepository bookmarkRepository;
 
     /**
      * required : create, find ...
@@ -82,8 +78,8 @@ class BookmarkRepositoryTest {
                 .build();
 
         subjectRepository.save(fruit);
-        wordRepository.save(apple);
-        wordRepository.save(banana);
+        wordRepoitory.save(apple);
+        wordRepoitory.save(banana);
 
         Bookmark bookmark_apple = Bookmark.builder()
                 .user(chulsu)

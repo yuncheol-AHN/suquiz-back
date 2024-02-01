@@ -1,6 +1,6 @@
 package com.example.entity.socialLogin.oauth.oauthApi.response;
 
-import com.example.entity.user.domain.OAuthProvider;
+import com.example.entity.domain.OAuthProvider;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
@@ -24,10 +24,10 @@ public class NaverInfoResponse implements OAuthInfoResponse {
         return response.email;
     }
 
-//    @Override
-//    public String getNickname() {
-//        return response.nickname;
-//    }
+    @Override
+    public String getNickname() {
+        return response.nickname;
+    }
 
     @Override
     public OAuthProvider getOAuthProvider() {

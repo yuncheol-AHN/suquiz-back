@@ -1,11 +1,8 @@
 package com.example.entity.repository;
 
-import com.example.entity.word.repository.WordRepository;
-import com.example.entity.word.domain.Category;
-import com.example.entity.word.domain.Subject;
-import com.example.entity.word.domain.Word;
-import com.example.entity.word.repository.SubjectRepository;
-import com.example.entity.word.repository.WordRepository;
+import com.example.entity.domain.Category;
+import com.example.entity.domain.Subject;
+import com.example.entity.domain.Word;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,19 +10,17 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
+import java.util.ArrayList;
 
 import static org.assertj.core.api.Assertions.*;
 
 @SpringBootTest
 @Transactional
 @Rollback(value = false)
-class WordRepositoryTest {
+class WordRepoitoryTest {
 
-    @Autowired
-    WordRepository wordRepository;
-    @Autowired
-    SubjectRepository subjectRepository;
+    @Autowired WordRepoitory wordRepoitory;
+    @Autowired SubjectRepository subjectRepository;
 
     @Test
     public void createWord() throws Exception {
@@ -50,10 +45,10 @@ class WordRepositoryTest {
                 .videoUrl("url").build();
 
         // when
-        wordRepository.save(apple);
+        wordRepoitory.save(apple);
 
         // then
-        Word findWord = wordRepository.findByWordName("apple");
+        Word findWord = wordRepoitory.findByWordName("apple");
         assertThat(apple.getWordName()).isEqualTo(findWord.getWordName());
 
     }
@@ -64,31 +59,23 @@ class WordRepositoryTest {
                 .subjectName("fruit")
                 .build();
 
-
         Subject fr = Subject.builder()
                 .subjectName("과일")
                 .build();
 
         Word word = Word.builder()
-                .videoUrl("1a")
-                .wordName("사과")
                 .subject(fruit)
+                .wordName("사과")
+                .videoUrl("1a")
                 .category(Category.WORD)
                 .build();
-
+        
         // when
-        subjectRepository.save(fruit);
-        subjectRepository.save(fr);
-        wordRepository.save(word);
-
-        List<Word> findWord = wordRepository.findByCategory(Category.WORD);
+        word.changeSubject(fr);
         // then
-//        System.out.println("word.getSubject().getSubjectName() = " + word.getSubject().getSubjectName());
-//        System.out.println("fr.getWordList().get(0).getWordName() = " + fr.getWordList().get(0).getWordName());
-        Assertions.assertThat(fruit.getWordList().size()).isEqualTo(1);
-        Assertions.assertThat(fruit.getWordList().get(0).getWordName()).isEqualTo("사과");
-//        Assertions.assertThat(fruit.getWordList().size()).isEqualTo(0);
-        System.out.println("findWord = " + findWord.get(0).getWordName());
+        System.out.println("word.getSubject().getSubjectName() = " + word.getSubject().getSubjectName());
+        System.out.println("fr.getWordList().get(0).getWordName() = " + fr.getWordList().get(0).getWordName());
+        Assertions.assertThat(fruit.getWordList().size()).isEqualTo(0);
 
     }
 }

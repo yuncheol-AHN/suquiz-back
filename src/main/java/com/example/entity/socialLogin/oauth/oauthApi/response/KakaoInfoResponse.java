@@ -1,6 +1,6 @@
 package com.example.entity.socialLogin.oauth.oauthApi.response;
 
-import com.example.entity.user.domain.OAuthProvider;
+import com.example.entity.domain.OAuthProvider;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
@@ -17,10 +17,10 @@ public class KakaoInfoResponse implements OAuthInfoResponse {
         return kakaoAccount.email;
     }
 
-//    @Override
-//    public String getNickname() {
-//        return kakaoAccount.profile.nickname;
-//    }
+    @Override
+    public String getNickname() {
+        return kakaoAccount.profile.nickname;
+    }
 
     @Override
     public OAuthProvider getOAuthProvider() {

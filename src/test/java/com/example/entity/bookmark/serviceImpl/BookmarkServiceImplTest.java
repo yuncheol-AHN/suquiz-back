@@ -47,13 +47,14 @@ class BookmarkServiceImplTest {
         // given
         User userA = User.builder()
                 .maxCorrectCount(0)
+                .recentCorrectCount(0)
                 .isPlaying(false)
                 .oAuthProvider(OAuthProvider.KAKAO)
                 .nickname("테스트1")
                 .imageUrl("1a")
                 .email("denny10002@naver.com")
                 .level(10)
-                .xp(100)
+                .exp(100)
                 .build();
 
         Subject subjectA = Subject.builder()

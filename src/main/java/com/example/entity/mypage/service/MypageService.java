@@ -32,7 +32,7 @@ public class MypageService {
                     .nickname(user.getNickname())
                     .profileImage(user.getImageUrl())
                     .level(user.getLevel())
-                    .exp(user.getXp())
+                    .exp(user.getExp())
                     .build();
         }
         return null;

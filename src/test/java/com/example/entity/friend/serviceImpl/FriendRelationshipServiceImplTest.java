@@ -37,7 +37,7 @@ class FriendRelationshipServiceImplTest {
                 .email("a")
                 .nickname("윤철")
                 .level(1)
-                .exp(300)
+
                 .isPlaying(false)
                 .maxCorrectCount(20)
                 .imageUrl("image.com")
@@ -47,7 +47,7 @@ class FriendRelationshipServiceImplTest {
                 .email("b")
                 .nickname("윤철갓")
                 .level(5)
-                .exp(300)
+
                 .isPlaying(false)
                 .maxCorrectCount(20)
                 .imageUrl("image.com")
@@ -56,7 +56,7 @@ class FriendRelationshipServiceImplTest {
                 .email("c")
                 .nickname("김현준")
                 .level(10)
-                .exp(300)
+
                 .isPlaying(false)
                 .maxCorrectCount(20)
                 .imageUrl("image.com")

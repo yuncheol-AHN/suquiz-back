@@ -34,8 +34,8 @@ public class OAuthLoginService {
         OAuthInfoResponse oAuthInfoResponse = requestOAuthInfoService.request(params);
         OAuthProvider oAuthProvider = oAuthInfoResponse.getOAuthProvider();
         String email = oAuthInfoResponse.getEmail();
-        Long memberId = findOrCreateMember(oAuthInfoResponse);
-        AuthTokens authTokens = authTokensGenerator.generate(memberId);
+        Long userId = findOrCreateMember(oAuthInfoResponse);
+        AuthTokens authTokens = authTokensGenerator.generate(userId);
 
         return new LoginResult(oAuthProvider,email,authTokens);
     }

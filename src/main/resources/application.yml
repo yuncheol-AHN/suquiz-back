@@ -10,8 +10,8 @@ oauth:
       redirect: http://localhost:8080/users/logout/kakao
       logout: https://kapi.kakao.com/v1/user/logout
   naver:
-    secret: RktX7yIc6P
-    client-id: Sz6qeDvQKMAa96LN6ESa
+    secret: KEbntDhS1I
+    client-id: P_LIzqGM9aUsN8YUcWoY
     url:
       auth: https://nid.naver.com
       api: https://openapi.naver.com
